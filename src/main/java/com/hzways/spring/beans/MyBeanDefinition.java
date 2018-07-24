@@ -6,7 +6,7 @@ package com.hzways.spring.beans;
  * @author hz.lei
  * @date 2018年04月07日 下午2:09
  */
-public class BeanDefinition {
+public class MyBeanDefinition {
     /**
      * bean 实例
      */
