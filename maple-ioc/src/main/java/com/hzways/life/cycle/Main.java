@@ -14,9 +14,9 @@ public class Main {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath*:services.xml");
         applicationContext.registerShutdownHook();
         applicationContext.start();
-        HelloLifeCycle helloLifeCycle = (HelloLifeCycle) applicationContext.getBean("helloLifeCycle");
-        helloLifeCycle.thinking();
-        Thread.sleep(20000);
-        applicationContext.destroy();
+        System.out.println("Main spring started");
+//        HelloLifeCycle helloLifeCycle = (HelloLifeCycle) applicationContext.getBean("helloLifeCycle");
+//        helloLifeCycle.doSome();
+//        Thread.sleep(Long.MAX_VALUE);
     }
 }

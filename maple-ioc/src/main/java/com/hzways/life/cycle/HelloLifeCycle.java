@@ -1,5 +1,6 @@
 package com.hzways.life.cycle;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.Lifecycle;
 import org.springframework.stereotype.Component;
 
@@ -17,13 +18,17 @@ import java.util.concurrent.TimeUnit;
 public class HelloLifeCycle implements Lifecycle {
     private volatile boolean running = false;
 
+
     private ExecutorService executors = Executors.newFixedThreadPool(1);
 
     public HelloLifeCycle() {
         System.out.println("HelloLifeCycle 构造方法!!!");
+        executors.execute(() -> {
+            while (running) {
+               //启动后,做业务需要做的事情
+            }
+        });
     }
-
-
 
 
     public void start() {
@@ -38,6 +43,7 @@ public class HelloLifeCycle implements Lifecycle {
         try {
             executors.awaitTermination(1, TimeUnit.HOURS);
         } catch (InterruptedException e) {
+            e.printStackTrace();
         }
         running = false;
     }
@@ -45,9 +51,6 @@ public class HelloLifeCycle implements Lifecycle {
     public boolean isRunning() {
         return running;
     }
-
-
-
 
 
     public void thinking() throws InterruptedException {
