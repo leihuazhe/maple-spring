@@ -24,6 +24,7 @@ public class HelloLifeCycle1 implements InitializingBean, DisposableBean {
         System.out.println("HelloLifeCycle1 构造方法!!!");
     }
 
+
     public void afterPropertiesSet() throws Exception {
         System.out.println("HelloLifeCycle1 afterPropertiesSet 启动");
     }

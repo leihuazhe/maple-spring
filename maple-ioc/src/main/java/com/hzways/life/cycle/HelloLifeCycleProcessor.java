@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
  * @author hz.lei
  * @since 2018年07月22日 下午3:18
  */
-@Component("lifecycleProcessor")
+//@Component("lifecycleProcessor")
 public class HelloLifeCycleProcessor implements LifecycleProcessor {
 
     @Override

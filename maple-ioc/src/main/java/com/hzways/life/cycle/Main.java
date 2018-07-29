@@ -14,9 +14,16 @@ public class Main {
         ClassPathXmlApplicationContext applicationContext = new ClassPathXmlApplicationContext("classpath*:services.xml");
         applicationContext.registerShutdownHook();
         applicationContext.start();
+
+        String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
+        for (String beanDefinitionName : beanDefinitionNames) {
+            System.out.println("-->: "+beanDefinitionName);
+        }
         System.out.println("Main spring started");
 //        HelloLifeCycle helloLifeCycle = (HelloLifeCycle) applicationContext.getBean("helloLifeCycle");
 //        helloLifeCycle.doSome();
 //        Thread.sleep(Long.MAX_VALUE);
+
+        applicationContext.getBean("simpleBeanPostProcessor");
     }
 }
