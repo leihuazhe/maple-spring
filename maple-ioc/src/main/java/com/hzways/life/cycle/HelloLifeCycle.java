@@ -13,7 +13,7 @@ import java.util.concurrent.TimeUnit;
  * @author hz.lei
  * @since 2018年07月22日 下午3:18
  */
-@Component
+//@Component
 public class HelloLifeCycle implements Lifecycle {
     private volatile boolean running = false;
 

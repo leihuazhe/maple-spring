@@ -17,13 +17,19 @@ public class Main {
 
         String[] beanDefinitionNames = applicationContext.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
-            System.out.println("-->: "+beanDefinitionName);
+            System.out.println("-->: " + beanDefinitionName);
         }
         System.out.println("Main spring started");
+
+
 //        HelloLifeCycle helloLifeCycle = (HelloLifeCycle) applicationContext.getBean("helloLifeCycle");
 //        helloLifeCycle.doSome();
 //        Thread.sleep(Long.MAX_VALUE);
 
         applicationContext.getBean("simpleBeanPostProcessor");
+
+
+        Thread.sleep(Long.MAX_VALUE);
+
     }
 }

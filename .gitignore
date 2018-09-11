@@ -3,3 +3,7 @@ target
 maple-spring.iml
 .idea/
 target/
+maple-ioc/log.log
+maple-ioc/src/main/java/com/.DS_Store
+maple-ioc/src/main/java/com/hzways/.DS_Store
+maple-ioc/start.sh
