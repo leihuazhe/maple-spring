@@ -16,7 +16,12 @@
          http://www.springframework.org/schema/task
 		 http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
+    <import resource="classpath*:services3-bean.xml"/>
 
-    <context:component-scan base-package="com.hzways.post.processor"/>
+    <bean id="manager" class="com.hzways.multiply.TransactionManager">
+        <property name="beanName" value="master"/>
+    </bean>
+
+
 
 </beans>

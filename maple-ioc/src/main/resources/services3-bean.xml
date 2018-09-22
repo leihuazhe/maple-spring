@@ -17,6 +17,8 @@
 		 http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
 
-    <context:component-scan base-package="com.hzways.post.processor"/>
+    <bean id="manager" class="com.hzways.multiply.Manager">
+        <property name="beanName" value="slave"/>
+    </bean>
 
 </beans>
