@@ -1,4 +1,4 @@
-package com.hzways.time;
+package com.hzways.map.time;
 
 import java.time.LocalDateTime;
 import java.time.ZoneId;

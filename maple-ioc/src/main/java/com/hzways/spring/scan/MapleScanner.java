@@ -15,6 +15,7 @@ import java.util.Set;
  * @author maple 2018.09.23 下午2:24
  */
 public class MapleScanner extends ClassPathBeanDefinitionScanner {
+
     private Class<? extends Annotation> annotationClass;
 
 
