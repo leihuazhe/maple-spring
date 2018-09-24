@@ -17,7 +17,7 @@
 		 http://www.springframework.org/schema/task/spring-task-3.1.xsd">
 
 
-    <bean id="manager" class="com.hzways.multiply.Manager">
+    <bean id="manager" class="com.hzways.spring.multiply.Manager">
         <property name="beanName" value="slave"/>
     </bean>
 

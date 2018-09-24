@@ -18,7 +18,7 @@
 
     <import resource="classpath*:services3-bean.xml"/>
 
-    <bean id="manager" class="com.hzways.multiply.TransactionManager">
+    <bean id="manager" class="com.hzways.spring.multiply.TransactionManager">
         <property name="beanName" value="master"/>
     </bean>
 

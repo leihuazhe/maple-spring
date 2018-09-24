@@ -18,8 +18,8 @@
    <!-- <context:property-placeholder location="classpath:config_order.properties" local-override="false"
                                   system-properties-mode="ENVIRONMENT"/>-->
 
-    <context:component-scan base-package="com.hzways.life.cycle"/>
+    <context:component-scan base-package="com.hzways.spring.lifecycle"/>
 
     <!--<context:annotation-config/>-->
-    <bean id="helloLifeCycle" class="com.hzways.life.cycle.HelloLifeCycle"/>
+    <bean id="helloLifeCycle" class="com.hzways.spring.lifecycle.HelloLifeCycle"/>
 </beans>
