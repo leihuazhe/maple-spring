@@ -45,7 +45,7 @@ public class MapleScannerRegistrar implements ImportBeanDefinitionRegistrar, Res
             scanner.setBeanNameGenerator(BeanUtils.instantiateClass(generatorClass));
         }
 
-        List<String> basePackages = new ArrayList<String>();
+        List<String> basePackages = new ArrayList<>();
         for (String pkg : annoAttrs.getStringArray("value")) {
             if (StringUtils.hasText(pkg)) {
                 basePackages.add(pkg);
