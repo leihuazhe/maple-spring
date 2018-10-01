@@ -7,13 +7,16 @@ import org.junit.Test;
 import org.springframework.core.annotation.AnnotationUtils;
 import org.springframework.util.ClassUtils;
 
-import java.util.Arrays;
+import javax.annotation.Resource;
 import java.util.Set;
 
 /**
  * @author maple 2018.09.25 上午11:14
  */
 public class AnnotationUtilsTest {
+
+    @Resource
+    private String msg = "hello Jdk 11";
 
     @Test
     public void test1() {
