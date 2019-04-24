@@ -10,35 +10,45 @@
     <version>0.1</version>
     <modules>
         <module>maple-ioc</module>
+        <module>maple-web</module>
     </modules>
 
+    <properties>
+        <spring.version>5.1.6.RELEASE</spring.version>
+        <spring4.version>4.3.5.RELEASE</spring4.version>
+    </properties>
 
     <dependencyManagement>
 
-
         <dependencies>
+            <dependency>
+                <groupId>org.springframework</groupId>
+                <artifactId>spring-webmvc</artifactId>
+                <version>${spring.version}</version>
+            </dependency>
+
             <!--注意scope   <scope>compile</scope>-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-tx</artifactId>
-                <version>4.3.5.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
             <!--context 的 作用 很大-->
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-context</artifactId>
-                <version>4.3.5.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-jdbc</artifactId>
-                <version>4.3.5.RELEASE</version>
+                <version>${spring.version}</version>
             </dependency>
 
             <dependency>
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-test</artifactId>
-                <version>4.3.5.RELEASE</version>
+                <version>${spring.version}</version>
                 <scope>compile</scope>
             </dependency>
             <dependency>
@@ -62,5 +72,18 @@
 
         </dependencies>
     </dependencyManagement>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>8</source>
+                    <target>8</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 
 </project>
