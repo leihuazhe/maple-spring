@@ -9,7 +9,7 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>maple-ioc</artifactId>
+    <artifactId>spring-core</artifactId>
 
     <dependencies>
         <dependency>
@@ -31,11 +31,17 @@
             <artifactId>junit</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/cglib/cglib -->
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib</artifactId>
+            <version>3.2.12</version>
+        </dependency>
+
         <!--aop-->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-aop</artifactId>
-            <version>5.0.6.RELEASE</version>
         </dependency>
 
         <dependency>
